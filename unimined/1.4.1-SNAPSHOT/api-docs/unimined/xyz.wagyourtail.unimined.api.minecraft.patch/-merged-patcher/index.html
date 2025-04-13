@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MergedPatcher</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    unimined
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.4.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":dokkaHtml/api">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":dokkaHtml/api"
+                                       data-filter=":dokkaHtml/api"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    unimined
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="unimined::xyz.wagyourtail.unimined.api.minecraft.patch/MergedPatcher///PointingToDeclaration//1179472636">
+  <div class="breadcrumbs"><a href="../../../index.html">unimined</a><span class="delimiter">/</span><a href="../index.html">xyz.wagyourtail.unimined.api.minecraft.patch</a><span class="delimiter">/</span><span class="current">MergedPatcher</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Merged</span><wbr></wbr><span><span>Patcher</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">MergedPatcher</a> : <a href="../-minecraft-patcher/index.html">MinecraftPatcher</a>, <a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/index.html">PatchProviders</a></div><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">0.4.10</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/index.html"><span>Patch</span><wbr></wbr><span><span>Providers</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1942807297%2FProperties%2F1179472636" anchor-label="addVanillaLibraries" id="-1942807297%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/add-vanilla-libraries.html"><span>add</span><wbr></wbr><span>Vanilla</span><wbr></wbr><span><span>Libraries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1942807297%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-minecraft-patcher/add-vanilla-libraries.html">addVanillaLibraries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1157577299%2FProperties%2F1179472636" anchor-label="canCombine" id="-1157577299%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/can-combine.html"><span>can</span><wbr></wbr><span><span>Combine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157577299%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div><div class="block"><span class="token annotation builtin">@set:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">var </span><a href="../-minecraft-patcher/can-combine.html">canCombine</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1729783609%2FProperties%2F1179472636" anchor-label="onMergeFail" id="-1729783609%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/on-merge-fail.html"><span>on</span><wbr></wbr><span>Merge</span><wbr></wbr><span><span>Fail</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1729783609%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@set:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">var </span><a href="../-minecraft-patcher/on-merge-fail.html">onMergeFail</a><span class="token operator">: </span><span class="token punctuation">(</span>clientNode<span class="token operator">: </span><span data-unresolved-link="org.objectweb.asm.tree/ClassNode///PointingToDeclaration/">ClassNode</span><span class="token punctuation">, </span>serverNode<span class="token operator">: </span><span data-unresolved-link="org.objectweb.asm.tree/ClassNode///PointingToDeclaration/">ClassNode</span><span class="token punctuation">, </span>fs<span class="token operator">: </span><span data-unresolved-link="org.apache.commons.compress.archivers.zip/ZipArchiveOutputStream///PointingToDeclaration/">ZipArchiveOutputStream</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-exception/index.html">Exception</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1101615686%2FProperties%2F1179472636" anchor-label="prodNamespace" id="-1101615686%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/prod-namespace.html"><span>prod</span><wbr></wbr><span><span>Namespace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1101615686%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div><div class="block"><span class="token annotation builtin">@set:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">var </span><a href="../-minecraft-patcher/prod-namespace.html">prodNamespace</a><span class="token operator">: </span><span data-unresolved-link="xyz.wagyourtail.unimined.mapping/Namespace///PointingToDeclaration/">Namespace</span></div><div class="brief "><p class="paragraph">the namespace to use for the production jar.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-194613110%2FProperties%2F1179472636" anchor-label="supportedEnvs" id="-194613110%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/supported-envs.html"><span>supported</span><wbr></wbr><span><span>Envs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-194613110%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-minecraft-patcher/supported-envs.html">supportedEnvs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span data-unresolved-link="xyz.wagyourtail.unimined.mapping/EnvType///PointingToDeclaration/">EnvType</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1049157574%2FProperties%2F1179472636" anchor-label="unprotectRuntime" id="-1049157574%2FProperties%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/unprotect-runtime.html"><span>unprotect</span><wbr></wbr><span><span>Runtime</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1049157574%2FProperties%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@get:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div><div class="block"><span class="token annotation builtin">@set:</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">var </span><a href="../-minecraft-patcher/unprotect-runtime.html">unprotectRuntime</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1127995229%2FFunctions%2F1179472636" anchor-label="accessTransformer" id="-1127995229%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-transformer.html"><span>access</span><wbr></wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1127995229%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-transformer.html"><span class="token function">accessTransformer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables <strong>just</strong> access transformer patching you have to create your own way to bootstrap it out of dev (and probably apply launchtweaker or something for dev launches).</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-transformer.html"><span class="token function">accessTransformer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.ataw/-access-transformer-patcher/index.html">AccessTransformerPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-transformer.html"><span class="token function">accessTransformer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.ataw/-access-transformer-patcher/index.html">AccessTransformerPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables <strong>just</strong> access transformer patching you have to create your own way to bootstrap it out of dev. (and probably apply launchtweaker or something for dev launches).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-985922329%2FFunctions%2F1179472636" anchor-label="accessWidener" id="-985922329%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-widener.html"><span>access</span><wbr></wbr><span><span>Widener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-985922329%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-widener.html"><span class="token function">accessWidener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-widener.html"><span class="token function">accessWidener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.ataw/-access-widener-patcher/index.html">AccessWidenerPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/access-widener.html"><span class="token function">accessWidener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.ataw/-access-widener-patcher/index.html">AccessWidenerPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables <strong>just</strong> access widener patching you have to create your own way to bootstrap it out of dev. (and probably apply launchtweaker or something for dev launches).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-712865818%2FFunctions%2F1179472636" anchor-label="afterRemapJarTask" id="-712865818%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/after-remap-jar-task.html"><span>after</span><wbr></wbr><span>Remap</span><wbr></wbr><span>Jar</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-712865818%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/after-remap-jar-task.html"><span class="token function">afterRemapJarTask</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">remapJarTask<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.task/-abstract-remap-jar-task/index.html">AbstractRemapJarTask</a><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1260215486%2FFunctions%2F1179472636" anchor-label="babric" id="1260215486%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/babric.html"><span><span>babric</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1260215486%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/babric.html"><span class="token function">babric</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/babric.html"><span class="token function">babric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/babric.html"><span class="token function">babric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the fabric patcher with additional tweaks for babric.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1921289515%2FFunctions%2F1179472636" anchor-label="beforeRemapJarTask" id="1921289515%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/before-remap-jar-task.html"><span>before</span><wbr></wbr><span>Remap</span><wbr></wbr><span>Jar</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1921289515%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/before-remap-jar-task.html"><span class="token function">beforeRemapJarTask</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">remapJarTask<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.task/-abstract-remap-jar-task/index.html">AbstractRemapJarTask</a><span class="token punctuation">, </span></span><span class="parameter ">input<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="588011143%2FFunctions%2F1179472636" anchor-label="cleanroom" id="588011143%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/cleanroom.html"><span><span>cleanroom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="588011143%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/cleanroom.html"><span class="token function">cleanroom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/cleanroom.html"><span class="token function">cleanroom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-cleanroom-patcher/index.html">CleanroomPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/cleanroom.html"><span class="token function">cleanroom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-cleanroom-patcher/index.html">CleanroomPatcher</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the cleanroom patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1284528413%2FFunctions%2F1179472636" anchor-label="configureRemapJar" id="-1284528413%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/configure-remap-jar.html"><span>configure</span><wbr></wbr><span>Remap</span><wbr></wbr><span><span>Jar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1284528413%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/configure-remap-jar.html"><span class="token function">configureRemapJar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">task<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.task/-abstract-remap-jar-task/index.html">AbstractRemapJarTask</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1147230014%2FFunctions%2F1179472636" anchor-label="craftBukkit" id="-1147230014%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/craft-bukkit.html"><span>craft</span><wbr></wbr><span><span>Bukkit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147230014%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/craft-bukkit.html"><span class="token function">craftBukkit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-craftbukkit-patcher/index.html">CraftbukkitPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/craft-bukkit.html"><span class="token function">craftBukkit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-craftbukkit-patcher/index.html">CraftbukkitPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">requires <code class="lang-kotlin">side &quot;server&quot;</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-845336789%2FFunctions%2F1179472636" anchor-label="createSourcesJar" id="-845336789%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/create-sources-jar.html"><span>create</span><wbr></wbr><span>Sources</span><wbr></wbr><span><span>Jar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-845336789%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/create-sources-jar.html"><span class="token function">createSourcesJar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classpath<span class="token operator">: </span><span data-unresolved-link="org.gradle.api.file/FileCollection///PointingToDeclaration/">FileCollection</span><span class="token punctuation">, </span></span><span class="parameter ">patchedJar<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">outputPath<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">linemappedPath<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">side<span class="token operator">: </span><span data-unresolved-link="xyz.wagyourtail.unimined.mapping/EnvType///PointingToDeclaration/">EnvType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1625910571%2FFunctions%2F1179472636" anchor-label="customLibraryFilter" id="-1625910571%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="custom-library-filter.html"><span>custom</span><wbr></wbr><span>Library</span><wbr></wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1625910571%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="custom-library-filter.html"><span class="token function">customLibraryFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="custom-library-filter.html"><span class="token function">customLibraryFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">set which vanilla libraries to include in minecraftLibraries</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1091215408%2FFunctions%2F1179472636" anchor-label="customPatcher" id="1091215408%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/custom-patcher.html"><span>custom</span><wbr></wbr><span><span>Patcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1091215408%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/custom-patcher.html">T</a><span class="token operator"> : </span><a href="../-minecraft-patcher/index.html">MinecraftPatcher</a><span class="token operator">&gt; </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/custom-patcher.html"><span class="token function">customPatcher</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mcPatcher<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/custom-patcher.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/custom-patcher.html">T</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="299751610%2FFunctions%2F1179472636" anchor-label="fabric" id="299751610%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fabric.html"><span><span>fabric</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="299751610%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fabric.html"><span class="token function">fabric</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fabric.html"><span class="token function">fabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fabric.html"><span class="token function">fabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the fabric patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1620917216%2FFunctions%2F1179472636" anchor-label="flint" id="-1620917216%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/flint.html"><span><span>flint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1620917216%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/flint.html"><span class="token function">flint</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/flint.html"><span class="token function">flint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/flint.html"><span class="token function">flint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the flint patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1106891416%2FFunctions%2F1179472636" anchor-label="forge" id="1106891416%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/forge.html"><span><span>forge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1106891416%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/forge.html"><span class="token function"><strike>forge</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/forge.html"><span class="token function"><strike>forge</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-forge-like-patcher/index.html">ForgeLikePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/forge.html"><span class="token function"><strike>forge</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-forge-like-patcher/index.html">ForgeLikePatcher</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the forge patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="615871199%2FFunctions%2F1179472636" anchor-label="foxLoader" id="615871199%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fox-loader.html"><span>fox</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="615871199%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fox-loader.html"><span class="token function">foxLoader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fox-loader.html"><span class="token function">foxLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.reindev/-fox-loader-patcher/index.html">FoxLoaderPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/fox-loader.html"><span class="token function">foxLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.reindev/-fox-loader-patcher/index.html">FoxLoaderPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the FoxLoader patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="571047492%2FFunctions%2F1179472636" anchor-label="jarMod" id="571047492%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/jar-mod.html"><span>jar</span><wbr></wbr><span><span>Mod</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="571047492%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/jar-mod.html"><span class="token function">jarMod</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/jar-mod.html"><span class="token function">jarMod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.jarmod/-jar-mod-agent-patcher/index.html">JarModAgentPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/jar-mod.html"><span class="token function">jarMod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.jarmod/-jar-mod-agent-patcher/index.html">JarModAgentPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the jar mod patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1148448273%2FFunctions%2F1179472636" anchor-label="legacyFabric" id="1148448273%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/legacy-fabric.html"><span>legacy</span><wbr></wbr><span><span>Fabric</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1148448273%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/legacy-fabric.html"><span class="token function">legacyFabric</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/legacy-fabric.html"><span class="token function">legacyFabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-legacy-fabric-patcher/index.html">LegacyFabricPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/legacy-fabric.html"><span class="token function">legacyFabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-legacy-fabric-patcher/index.html">LegacyFabricPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the fabric patcher with additional tweaks for LegacyFabric.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205091123%2FFunctions%2F1179472636" anchor-label="liteloader" id="-1205091123%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/liteloader.html"><span><span>liteloader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205091123%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/liteloader.html"><span class="token function">liteloader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/liteloader.html"><span class="token function">liteloader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.liteloader/-lite-loader-patcher/index.html">LiteLoaderPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/liteloader.html"><span class="token function">liteloader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.liteloader/-lite-loader-patcher/index.html">LiteLoaderPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the liteloader patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1159623623%2FFunctions%2F1179472636" anchor-label="minecraftForge" id="-1159623623%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/minecraft-forge.html"><span>minecraft</span><wbr></wbr><span><span>Forge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1159623623%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/minecraft-forge.html"><span class="token function">minecraftForge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/minecraft-forge.html"><span class="token function">minecraftForge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-minecraft-forge-patcher/index.html">MinecraftForgePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/minecraft-forge.html"><span class="token function">minecraftForge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-minecraft-forge-patcher/index.html">MinecraftForgePatcher</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the minecraft forge patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1597195569%2FFunctions%2F1179472636" anchor-label="name" id="1597195569%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1597195569%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/name.html"><span class="token function">name</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="385713253%2FFunctions%2F1179472636" anchor-label="neoForge" id="385713253%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forge.html"><span>neo</span><wbr></wbr><span><span>Forge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="385713253%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forge.html"><span class="token function">neoForge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forge.html"><span class="token function">neoForge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-neo-forged-patcher/index.html">NeoForgedPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forge.html"><span class="token function">neoForge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-neo-forged-patcher/index.html">NeoForgedPatcher</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1933831419%2FFunctions%2F1179472636" anchor-label="neoForged" id="-1933831419%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forged.html"><span>neo</span><wbr></wbr><span><span>Forged</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1933831419%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forged.html"><span class="token function"><strike>neoForged</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forged.html"><span class="token function"><strike>neoForged</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-neo-forged-patcher/index.html">NeoForgedPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/neo-forged.html"><span class="token function"><strike>neoForged</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.forge/-neo-forged-patcher/index.html">NeoForgedPatcher</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the NeoForged patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-396374469%2FFunctions%2F1179472636" anchor-label="ornitheFabric" id="-396374469%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/ornithe-fabric.html"><span>ornithe</span><wbr></wbr><span><span>Fabric</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-396374469%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/ornithe-fabric.html"><span class="token function">ornitheFabric</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/ornithe-fabric.html"><span class="token function">ornitheFabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-legacy-fabric-patcher/index.html">LegacyFabricPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/ornithe-fabric.html"><span class="token function">ornitheFabric</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-legacy-fabric-patcher/index.html">LegacyFabricPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the fabric patcher with additional tweaks for Ornithe.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2011866062%2FFunctions%2F1179472636" anchor-label="paper" id="-2011866062%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/paper.html"><span><span>paper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2011866062%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/paper.html"><span class="token function">paper</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/paper.html"><span class="token function">paper</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-paper-patcher/index.html">PaperPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/paper.html"><span class="token function">paper</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-paper-patcher/index.html">PaperPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the paper patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1396749727%2FFunctions%2F1179472636" anchor-label="prodNamespace" id="1396749727%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prod-namespace.html"><span>prod</span><wbr></wbr><span><span>Namespace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1396749727%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="prod-namespace.html"><span class="token function">prodNamespace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">namespace<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1738020852%2FFunctions%2F1179472636" anchor-label="quilt" id="-1738020852%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/quilt.html"><span><span>quilt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1738020852%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/quilt.html"><span class="token function">quilt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/quilt.html"><span class="token function">quilt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/quilt.html"><span class="token function">quilt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.fabric/-fabric-like-patcher/index.html">FabricLikePatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the quilt patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1035059185%2FFunctions%2F1179472636" anchor-label="rift" id="1035059185%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/rift.html"><span><span>rift</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1035059185%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/rift.html"><span class="token function">rift</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/rift.html"><span class="token function">rift</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.rift/-rift-patcher/index.html">RiftPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/rift.html"><span class="token function">rift</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.rift/-rift-patcher/index.html">RiftPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">enables the rift patcher.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1255970156%2FFunctions%2F1179472636" anchor-label="setOnMergeFail" id="-1255970156%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-minecraft-patcher/set-on-merge-fail.html"><span>set</span><wbr></wbr><span>On</span><wbr></wbr><span>Merge</span><wbr></wbr><span><span>Fail</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1255970156%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-minecraft-patcher/set-on-merge-fail.html"><span class="token function">setOnMergeFail</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">closure<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1121082485%2FFunctions%2F1179472636" anchor-label="setProdNamespace" id="1121082485%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-prod-namespace.html"><span>set</span><wbr></wbr><span>Prod</span><wbr></wbr><span><span>Namespace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1121082485%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-prod-namespace.html"><span class="token function"><strike>setProdNamespace</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">namespace<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1348304518%2FFunctions%2F1179472636" anchor-label="spigot" id="1348304518%2FFunctions%2F1179472636" data-filterable-set=":dokkaHtml/api"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/api" data-filterable-set=":dokkaHtml/api">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/spigot.html"><span><span>spigot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1348304518%2FFunctions%2F1179472636"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/spigot.html"><span class="token function">spigot</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><span data-unresolved-link="groovy.lang/DelegatesTo///PointingToDeclaration/"><span class="token annotation builtin">DelegatesTo</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-spigot-patcher/index.html">SpigotPatcher::class</a><span class="token punctuation">, </span></span><wbr></wbr><span>strategy<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>action<span class="token operator">: </span><span data-unresolved-link="groovy.lang/Closure///PointingToDeclaration/">Closure</span><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../xyz.wagyourtail.unimined.api.minecraft/-patch-providers/spigot.html"><span class="token function">spigot</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="../../xyz.wagyourtail.unimined.api.minecraft.patch.bukkit/-spigot-patcher/index.html">SpigotPatcher</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">requires <code class="lang-kotlin">side &quot;server&quot;</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
