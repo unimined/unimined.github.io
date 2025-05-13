@@ -702,6 +702,7 @@ $dokka.location:xyz.wagyourtail.unimined.util//decapitalized/kotlin.String#/Poin
 $dokka.location:xyz.wagyourtail.unimined.util//defaultedMapOf/#kotlin.Function2[xyz.wagyourtail.unimined.util.DefaultMap[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/defaulted-map-of.html
 $dokka.location:xyz.wagyourtail.unimined.util//defaultedMapOf/#kotlin.collections.MutableMap[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]#kotlin.Function2[xyz.wagyourtail.unimined.util.DefaultMap[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/defaulted-map-of.html
 $dokka.location:xyz.wagyourtail.unimined.util//deleteRecursively/java.nio.file.Path#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/delete-recursively.html
+$dokka.location:xyz.wagyourtail.unimined.util//execOps/org.gradle.api.Project#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/exec-ops.html
 $dokka.location:xyz.wagyourtail.unimined.util//forEachFile/java.nio.file.Path#kotlin.Function1[java.nio.file.Path,kotlin.Unit]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/for-each-file.html
 $dokka.location:xyz.wagyourtail.unimined.util//forEachInZip/java.nio.file.Path#kotlin.Function2[kotlin.String,java.io.InputStream,kotlin.Unit]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/for-each-in-zip.html
 $dokka.location:xyz.wagyourtail.unimined.util//forEntryInZip/java.nio.file.Path#kotlin.Function2[org.apache.commons.compress.archivers.zip.ZipArchiveEntry,java.io.InputStream,kotlin.Unit]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/for-entry-in-zip.html
@@ -777,6 +778,8 @@ $dokka.location:xyz.wagyourtail.unimined.util/FlexVerComparator/decompose/#kotli
 $dokka.location:xyz.wagyourtail.unimined.util/GlobToRegex///PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-glob-to-regex/index.html
 $dokka.location:xyz.wagyourtail.unimined.util/GlobToRegex/apply/#kotlin.String/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-glob-to-regex/apply.html
 $dokka.location:xyz.wagyourtail.unimined.util/GlobToRegex/patternMatcher/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-glob-to-regex/pattern-matcher.html
+$dokka.location:xyz.wagyourtail.unimined.util/InjectedExecOps///PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-injected-exec-ops/index.html
+$dokka.location:xyz.wagyourtail.unimined.util/InjectedExecOps/execOps/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-injected-exec-ops/exec-ops.html
 $dokka.location:xyz.wagyourtail.unimined.util/JarInterface///PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-jar-interface/index.html
 $dokka.location:xyz.wagyourtail.unimined.util/JarInterface/asJar/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-jar-interface/as-jar.html
 $dokka.location:xyz.wagyourtail.unimined.util/JarInterface/asJar/#groovy.lang.Closure[*]/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.util/-jar-interface/as-jar.html
