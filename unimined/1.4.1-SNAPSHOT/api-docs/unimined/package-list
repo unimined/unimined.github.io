@@ -410,6 +410,7 @@ $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/combinedW
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/createJarTask/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/create-jar-task.html
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/defaultRemapJar/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/default-remap-jar.html
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/defaultRemapSourcesJar/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/default-remap-sources-jar.html
+$dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/forgeMCVersion/#/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/forge-m-c-version.html
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/from/#kotlin.String/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/from.html
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/from/#org.gradle.api.Project#org.gradle.api.tasks.SourceSet/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/from.html
 $dokka.location:xyz.wagyourtail.unimined.api.minecraft/MinecraftConfig/from/#org.gradle.api.tasks.SourceSet/PointingToDeclaration/unimined/xyz.wagyourtail.unimined.api.minecraft/-minecraft-config/from.html
