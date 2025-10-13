@@ -1,1 +1,1 @@
-sourceset_dependencies='{":dokkaHtml/api":[]}'
+sourceset_dependencies='{":/api":[]}'
